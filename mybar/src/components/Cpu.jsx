@@ -18,11 +18,13 @@ export default class CPU extends React.Component {
     // === Parse Output === //
     let frontmost = parseOutput(output, "cpu");
     let matches = regex.exec(frontmost);
-    let user = matches[1];
-    let sys = matches[2];
-    let offset = Number(user) + 50;
+    if (matches.length < 3) {
+      matches = [0, 0, 100];
+    }
+    let user = Number(matches[1]);
+    let sys = Number(matches[2]) + user;
 
-    let TimeSVG = styled("svg")`
+    let CpuSVG = styled("svg")`
       width: 160px;
       height: 50%;
       padding-top: 7px;
@@ -30,14 +32,14 @@ export default class CPU extends React.Component {
     `;
 
     return (
-      <TimeSVG>
+      <CpuSVG>
         <text x="0" y="15" fill="#9f7">
           cpu:{" "}
         </text>
         <rect width="100" height="30" x="50" fill="#003300" />
-        <rect width={`${user}`} height="30" x="50" fill="yellowgreen" />
-        <rect width={`${sys}`} x={`${offset}`} height="30" fill="lime" />
-      </TimeSVG>
+        <rect width={`${sys}`} x="50" height="30" fill="green" />
+        <rect width={`${user}`} height="30" x="50" fill="lime" />
+      </CpuSVG>
     );
   }
 }

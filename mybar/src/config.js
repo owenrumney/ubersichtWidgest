@@ -14,7 +14,7 @@ import * as Settings from "./enums";
 //   * '-': Flexing empty space
 //   * '|': Fixed empty space
 // Note: All commands are case-sensitive
-export const renderOrder = 'S-CT';
+export const renderOrder = 'AS-CT';
 
 // === Widget Config === //
 // The following object allows for basic control without
@@ -33,7 +33,7 @@ export const config = {
     Application: {
         // Allows for the text to dynamically change
         // without shifting all the widgets a ton.
-        paddedWidth: '100px'
+        paddedWidth: '200px'
     },
     CPU: {
         // Allows for the text to dynamically change
@@ -141,7 +141,7 @@ export const config = {
         //    * 'S'|'s': Seconds [Default|0-Padded]
         //    * '?': Displays 'AM' or 'PM'
         //    * any: Any other character can be used as regular text
-        displayOrder: 'd/m h:p',
+        displayOrder: 'W d/m, h:p',
         // Map a color to each command
         colors: {
             'w': '#f99',
