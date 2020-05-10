@@ -14,7 +14,7 @@ import * as Settings from "./enums";
 //   * '-': Flexing empty space
 //   * '|': Fixed empty space
 // Note: All commands are case-sensitive
-export const renderOrder = 'AS-CT';
+export const renderOrder = 'AS-CMTW';
 
 // === Widget Config === //
 // The following object allows for basic control without

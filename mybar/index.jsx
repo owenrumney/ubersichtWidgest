@@ -27,7 +27,7 @@ export const className = `
   
 	background-color: ${config.Root.backgroundColor};
 	@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
-  font-family: 'Fira Code', monospace;
+  font-family: 'FiraCode-Retina', monospace;
   font-size: 1.1em;
 	color: white;
 	whitespace: nowrap;
@@ -60,6 +60,7 @@ export const render = ({ output, error }) => {
         break;
       case "C":
         components.push(<CPU key={index} output={output} />);
+        break;
       case "M":
         components.push(<MEM key={index} output={output} />);
         break;
@@ -129,6 +130,7 @@ WIFI_NAME=$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Re
 WIFI_STATUS=$(if [ -n "$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I | grep AirPort | cut -d ':' -f2)" ]; then echo "false"; else echo "true"; fi)
 
 # === SPOTIFY === #
+
 # Uses <JSONQuote> to get around weird quote escape error
 SPOTIFY=$(
 	osascript -l JavaScript <<EOD | sed -e 's/<JSONQuote>/\"/g'
