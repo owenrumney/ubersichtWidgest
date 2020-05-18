@@ -38,7 +38,7 @@ export const config = {
     CPU: {
         // Allows for the text to dynamically change
         // without shifting all the widgets a ton.
-
+paddedWidth: '220px'
     },
     // === Command: 'B' === //
     Battery: {
