@@ -7,7 +7,8 @@ const SpotifyDiv = styled("div")`
   display: inline-block;
   whitespace: nowrap;
   height: 100%;
-  margin-top: 5px;
+  padding-top: 5px;
+  padding-left: 15px;
   flex: 0;
 `;
 

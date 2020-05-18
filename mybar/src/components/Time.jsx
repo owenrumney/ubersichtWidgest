@@ -5,8 +5,10 @@ import { styled, React } from "uebersicht";
 const TimeDiv = styled("div")`
   margin-right: 20px;
   display: inline-block;
-  margin-top: 5px;
+  padding: 5px 20px 5px 15px;
+  margin-right: -10px;
   flex: 0;
+  background: #666600;
 `;
 
 export default class Time extends React.Component {

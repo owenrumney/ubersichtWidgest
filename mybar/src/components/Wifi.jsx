@@ -61,14 +61,15 @@ export default class Wifi extends React.Component {
 
         let WifiSVG = styled("svg")`
             height: 90%;
-            vertical-align: top;
-            padding-left: 3px;
+            vertical-align: middle;
+            padding-left: 3px; 
         `;
 
         let WifiName = styled('span')`
             display: ${cfg.displayName ? "initial" : "none"};
             paddingRight: 3px;
-            verticalAlign: bottom;
+            padding: 4px;
+            verticalAlign: middle;
         `;
 
         let components = [];

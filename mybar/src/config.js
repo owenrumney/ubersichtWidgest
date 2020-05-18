@@ -14,7 +14,7 @@ import * as Settings from "./enums";
 //   * '-': Flexing empty space
 //   * '|': Fixed empty space
 // Note: All commands are case-sensitive
-export const renderOrder = 'AS-CMTW';
+export const renderOrder = 'AS-CMTB';
 
 // === Widget Config === //
 // The following object allows for basic control without
@@ -24,10 +24,10 @@ export const config = {
     Root: {
         // Where to position the menubar.
         // 'top' or 'bottom' only.
-        position: Settings.Root.Position.BOTTOM,
+        position: Settings.Root.Position.TOP,
         // The color of the bar itself
-        // backgroundColor: '#33364f'
-        backgroundColor: '#152032'
+        backgroundColor: '#000'
+        // backgroundColor: '#152032'
     },
     // === Command: 'A' === //
     Application: {
@@ -38,7 +38,7 @@ export const config = {
     CPU: {
         // Allows for the text to dynamically change
         // without shifting all the widgets a ton.
-paddedWidth: '220px'
+        paddedWidth: '10px'
     },
     // === Command: 'B' === //
     Battery: {
@@ -54,8 +54,8 @@ paddedWidth: '220px'
         // and including the given one. 
         // Values are [<Level>, <Color>]
         colorSteps: Settings.BatteryStyle.Colors.step([
-            [0.25, Settings.Colors.RED],
-            [0.5, Settings.Colors.YELLOW],
+            [0.2, Settings.Colors.RED],
+            [0.6, Settings.Colors.YELLOW],
             [1.0, Settings.Colors.GREEN],
         ]),
         // The opacity of the ticks that are empty
@@ -93,7 +93,7 @@ paddedWidth: '220px'
         //    * 'r': Is Repeat On?
         //    * any: Any other character can be used as regular text
         // Note: All commands are case-sensitive
-        displayOrder: "IS-AT",
+        displayOrder: "IS-ATsr",
         // The color of the Song text
         displaySong: "#e90",
         // Removes all trailing song info after the '('
@@ -101,7 +101,7 @@ paddedWidth: '220px'
         // The color of the Artist text
         displayArtist: "#fe8",
         // Determines whether and how to display the Album Artwork
-        displayArtwork: Settings.SpotifyStyle.ArtDisplay.SHOW,
+        displayArtwork: Settings.SpotifyStyle.ArtDisplay.NONE,
         // Determines whether and how to display the Time Left
         displayTime: Settings.SpotifyStyle.TimeDisplay.ICON,
         // Inverts the time display like below:
@@ -117,14 +117,14 @@ paddedWidth: '220px'
         // The color of the Repeat icon
         displayRepeat: "#fff",
         // If true -> displays 'Nothing Playing' if Spotify is closed
-        displayDespiteNothing: true,
+        displayDespiteNothing: false,
         // Padding between components
         padding: "3px",
     },
     // === Command: '|' === //
     Spacer: {
         // How much the spacer spaces
-        padding: '10px'
+        padding: '5px'
     },
     // === Command: 'T' === //
     Time: {
@@ -144,13 +144,7 @@ paddedWidth: '220px'
         displayOrder: 'W d/m, h:p',
         // Map a color to each command
         colors: {
-            'w': '#f99',
-            'm': '#b9f',
-            'D': '#9f7',
-            'h': '#b9f',
-            'p': '#b9f',
-            's': '#b9f',
-            '?': '#565d'
+
         }
     },
     // === Command: 'W' === //
@@ -162,7 +156,7 @@ paddedWidth: '220px'
         // This is simply an array of color values.
         // If there are fewer colors than bars, then the
         // last color in the array is used for the remaining.
-        filledColors: Settings.WifiStyle.Color.DEFAULT,
+        filledColors: Settings.WifiStyle.Color.RAINBOW_LIGHT,
         // Set the color of the empty wifi bars
         emptyBarColor: "#fff5",
         // Determines whether and where to display the SSID
