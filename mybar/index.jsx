@@ -14,7 +14,7 @@ import {
   Wifi,
 } from "./src/components/Components";
 
-export const refreshFrequency = 500;
+export const refreshFrequency = 1000;
 
 // === Root Element Style === //
 export const className = `
