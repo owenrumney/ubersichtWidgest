@@ -22,13 +22,13 @@ export const className = `
   left: 0;
   
 	width: 100%;
-	height: 36px;
-  padding-top: 2px;
+	height: 25px;
+  padding-top: 0px;
   
 	background-color: ${config.Root.backgroundColor};
 	@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
   font-family: 'FiraCode-Retina', monospace;
-  font-size: 1.1em;
+  font-size: .8em;
 	color: white;
 	whitespace: nowrap;
 `;

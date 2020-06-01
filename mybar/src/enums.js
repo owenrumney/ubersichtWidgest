@@ -1,7 +1,7 @@
 export const Colors = Object.freeze({
     FG: '#fff',
 
-    RED: '#ff8888', 
+    RED: '#ff3c3c',
     YELLOW: '#ffff00',
     GREEN: '#00ff00',
 });

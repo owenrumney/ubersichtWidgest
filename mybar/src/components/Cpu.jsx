@@ -15,39 +15,20 @@ export default class CPU extends React.Component {
     let sys = Number(matches[2]).toPrecision(3);
     let idle = Number(matches[3]).toPrecision(4);
 
-    let CpuSVG = styled("svg")`
-      width: 150px;
-      height: 50%;
-      padding-top: 7px;
-      vertical-align: -5%;
-    `;
-
     const CpuDiv = styled("div")`
       position: relative;
       display: inline-block;
       font-family: "FiraCode-Retina", monospace;
-      margin-top: 5px;
-      padding-left: 10px;
-      min-width: ${config.CPU.paddedWidth};
+      padding: 5px 15px 5px 15px;
+      background: #0a0072;
+      color: white;s
       flex: 0;
     `;
 
     return (
-      <CpuDiv>cpu: 
+      <CpuDiv>CPU: 
         {`${user}`}/{`${sys}`}/{`${idle}`}
       </CpuDiv>
     );
-
-      // <CpuSVG>
-      //   <text x="0" y="15" fill="#9f7">
-      //     cpu:{" "}
-          
-      //   </text>
-      //   <rect width="50" height="30" x="50" fill="#003300" >
-      //     <title>{`${frontmost}`}</title>
-      //   </rect>
-      //   <rect width={`${sys}`} x="50" height="30" fill="green" />
-      //   <rect width={`${user}`} height="30" x="50" fill="lime" />
-      // </CpuSVG>
   }
 }

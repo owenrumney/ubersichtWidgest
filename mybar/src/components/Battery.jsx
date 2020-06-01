@@ -71,29 +71,22 @@ export default class Battery extends React.Component {
         }
         
 
-        let BatteryAlert = styled('div')`
-        position: absolute;
-        top: 35%;
-        left: 50%;
-        
-        text-align: center;
-        font-size: 90%;
-        font-weight: bolder;
+    const BatteryDiv = styled("div")`
+      position: relative;
+      display: inline-block;
+      font-family: "FiraCode-Retina", monospace;
+      padding: 5px 15px 5px 15px;
+      background: ${color};
+      color: gray;
+      flex: 0;
+    `;
 
-        transform-origin: 46% 55%;
-        animation: anim ${shouldAnimate}ms linear infinite;
-        ${cfg.animationType}
-        `
-
-        return (
-            <BatteryDiv style={{letterSpacing: '2px'}}>
-                <span>[</span>
-                <span style={batteryFillColor}>{cfg.tick.repeat(ticksToFill)}</span>
-                <span style={{opacity: cfg.unfilledOpacity, fontSize: '90%'}}>{cfg.tick.repeat(totalTicks - ticksToFill)}</span>
-                <span>]</span>
-                <BatteryAlert>{alertText}</BatteryAlert>
-            </BatteryDiv>
-        )
+    return (
+      <BatteryDiv>
+        BATTERY:
+        {`${chargeVal}`}% {`${alertText}`}
+      </BatteryDiv>
+    );
     }
 
 }
